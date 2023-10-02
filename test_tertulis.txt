@@ -1,0 +1,13 @@
+1. Familiarkah anda dengan real time push notification? jika iya, sebutkan keunggulan
+platform yang paling anda kuasai.
+2. Katakanlah aplikasi yang anda buat di pakai untuk keperluan lapangan semisal absensi atau
+hal serupa yang merekam waktu secara real time.
+Bagaimana jika user mengalami kendala koneksi ketika hal itu terjadi? Apa hal yang akan
+anda lakukan untuk meminimalisir kerancuan tersebut?
+----------------------------------------------------------
+1. Iya saya familiar dengan real time push notification, saya pernah mencoba menggunakan firebase, socket.io dan one signal. 
+Untuk platform yang paling saya kuasai adalah firebase karena saya pernah membuat aplikasi android yang menggunakan firebase sebagai backendnya dan memanfaatkan fitur real time database dan push notificationnya.
+
+2. Menurut saya terdapat beberapa opsi, diantaranya :
+A. Membuat fitur offline mode, dimana data yang diinputkan akan disimpan di local storage dan akan diupload ketika koneksi internet tersedia.
+C. Membuat fitur notifikasi ketika koneksi internet tersedia, dimana ketika koneksi internet tersedia, akan muncul notifikasi untuk mengupload data yang belum terupload ke server.
