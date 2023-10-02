@@ -81,6 +81,7 @@ class StudentCubit extends Cubit<StudentState> {
   }
 
   Future<StudentState> getById(int id) async {
+    emit(state.copyWith(onGetById: const AsyncLoading()));
     final result = await repository.getById(id);
     result.fold(
       (l) => emit(state.copyWith(onGetById: AsyncError(l.message))),
@@ -95,6 +96,7 @@ class StudentCubit extends Cubit<StudentState> {
   }
 
   Future<StudentState> delete(int id) async {
+    emit(state.copyWith(onDelete: const AsyncLoading()));
     final result = await repository.delete(id);
     result.fold(
       (l) => emit(state.copyWith(onDelete: AsyncError(l.message))),
@@ -110,6 +112,7 @@ class StudentCubit extends Cubit<StudentState> {
   }
 
   Future<StudentState> create(FormStudentCreateOrUpdateModel form) async {
+    emit(state.copyWith(onCreate: const AsyncLoading()));
     final result = await repository.create(form);
     result.fold(
       (l) => emit(state.copyWith(onCreate: AsyncError(l.message))),
@@ -127,6 +130,7 @@ class StudentCubit extends Cubit<StudentState> {
   Future<StudentState> update(
     FormStudentCreateOrUpdateModel form,
   ) async {
+    emit(state.copyWith(onUpdate: const AsyncLoading()));
     final result = await repository.update(form);
     result.fold(
       (l) => emit(state.copyWith(onUpdate: AsyncError(l.message))),
